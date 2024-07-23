@@ -1,41 +1,46 @@
 #include <iostream> 
+#include <cstdlib>
 using namespace std;
 
-void compare(int x){
-  if (x==7)
+void compare(int x,int a){
+  if (x==a)
   {
     cout<<"Congratulations You guessed the number it was 7 \n\n Thala for a reason\n\n";
   }
-  else if (x>7 && x<10)
+  else if (x>a && x<a+5)
   {
     cout<<"Wrong guess \nYou are very close try a bit lower";
   } 
-  else if (x<7 && x>4)
+  else if (x<a && x>a-5)
   {
     cout<<"Wrong guess\nYou are very close try a bit higher";
   } 
-  else if (x>10)
+  else if (x>a)
   {
     cout<<"Wrong guess\nTry a smaller number";
   } 
-  else if (x<4)
+  else if (x<a)
   {
     cout<<"Wrong guess\nTry a higher number";
   }
 }
 
 int main() {
-  int num,input,i;
-  num=7;  
-  
+  int num,input,i,a;
+  a=rand() % 101;
+    
+  cout<<"\nWelcome to the number guesser game";
+ cout<<"\nGuess the number it ranges from 0 to 1";
+
+
   for(i=1;i<=3;i++){
     cout << "\n\nGuess the number :";
     cin>>input;
-    if (input!=7)
+    if (input!=a)
     {
-      compare(input);
+      compare(input,a);
     }else{
-      compare(input);
+      compare(input,a);
       return 0;
     }
     
