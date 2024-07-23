@@ -30,7 +30,7 @@ int main() {
   a=rand() % 101;
     
   cout<<"\nWelcome to the number guesser game";
- cout<<"\nGuess the number it ranges from 0 to 1";
+ cout<<"\nGuess the number it ranges from 0 to 100";
 
 
   for(i=1;i<=3;i++){
@@ -46,5 +46,7 @@ int main() {
     
   } 
   cout<<"\n\n\tGame Over";
+
+cout<<"\nThe number was:"<<a;
   return 0;
 } 
