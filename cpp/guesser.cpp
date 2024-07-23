@@ -1,11 +1,13 @@
 #include <iostream> 
 #include <cstdlib>
+#include <ctime> 
+
 using namespace std;
 
 void compare(int x,int a){
   if (x==a)
   {
-    cout<<"Congratulations You guessed the number it was 7 \n\n Thala for a reason\n\n";
+    cout<<"Congratulations You guessed the number";
   }
   else if (x>a && x<a+5)
   {
@@ -27,6 +29,8 @@ void compare(int x,int a){
 
 int main() {
   int num,input,i,a;
+  
+  srand(time(0) );
   a=rand() % 101;
     
   cout<<"\nWelcome to the number guesser game";
